@@ -11,6 +11,8 @@ public class TesterOnFiles {
     private static final String OUT_FOLDER = FOLDER + "out/";
     private static final String GRAPH_SCRIPT_PATH =  "plot.plt";
 
+    private static final int BUFFER_SIZE = 10;
+
     LinkedList<String> buf10 = new LinkedList<String>();
 
     public void gnuplotScript(String inputFile){
@@ -60,7 +62,7 @@ public class TesterOnFiles {
     }
 
     public void initializeBufs(){
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < BUFFER_SIZE; i++) {
             buf10.add("0   0   0   0   0   0   0000");
         }
     }
